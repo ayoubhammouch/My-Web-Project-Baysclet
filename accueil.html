@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bikcraft</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">bikcraft</h1>
+        <nav class="nav">
+          <a href="accueil.html">Accueil</a>
+          <a href="baysclet.html">Bicycles</a>
+          <a href="Insurance.html">Insurance</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Custom-made bicycles.</h2>
+        <p>
+          High‑precision and quality electric bicycles, custom‑made for you.
+          Explore the world at your own speed with Bikcraft.
+        </p>
+        <a href="#" class="btn">CHOOSE YOURS</a>
+      </div>
+      <div class="hero-img">
+        <img src="bicicleta1 1.svg" alt="Bike" />
+      </div>
+    </section>
+
+    <section class="models">
+      <h2>Choose yours<span>.</span></h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="bicicleta2.svg" alt="Magic Might" />
+          <h3>Magic Might</h3>
+          <p>R$ 2499</p>
+        </div>
+
+        <div class="card">
+          <img src="bicicleta3.svg" alt="Nimbus Stark" />
+          <h3>Nimbus Stark</h3>
+          <p>R$ 4999</p>
+        </div>
+
+        <div class="card">
+          <img src="bicicleta1 1.svg" alt="Nebula Cosmic" />
+          <h3>Nebula Cosmic</h3>
+          <p>R$ 3999</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom">
+      <div class="custom-text">
+        <span>ADVANCED TECHNOLOGY</span>
+        <h2>You choose your colors and components<span>.</span></h2>
+        <p>
+          Each Bikcraft is unique and has its own identity. The measurements
+          will be exact for your body and height, ensuring comfort and
+          ergonomics. You can also fully customize your colors.
+        </p>
+        <a href="#" class="btn">CHOOSE A MODEL</a>
+      </div>
+
+      <div class="custom-img">
+        <img src="diferencial.svg" alt="Tools" />
+      </div>
+    </section>
+    <footer>
+      <div>
+        <h3>bikecraft</h3>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <p>+212 600-000016</p>
+        <p>contact@contactme.com</p>
+      </div>
+      <div>
+        <h4>INFORMATION</h4>
+        <p>Bicycles</p>
+        <p>Insurance</p>
+        <p>Contact</p>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header {
+    background: #000;
+    padding: 20px 0;
+  }
+
+  .header .logo {
+    color: #fff;
+    font-size: 28px;
+  }
+
+  .nav a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    background: #000;
+    color: white;
+    animation: fadeIn 1.2s ease;
+  }
+
+  .hero-text {
+    max-width: 400px;
+  }
+
+  .hero-text h2 {
+    font-size: 48px;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #f4b400;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #ffcc33;
+  }
+
+  .hero-img img {
+    width: 500px;
+    animation: slideIn 1.3s ease;
+  }
+
+  .models {
+    padding: 60px;
+    text-align: center;
+  }
+
+  .models h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .models span {
+    color: #f4b400;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .card {
+    background: #fafafa;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+  }
+
+  .custom {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+  }
+
+  .custom-text {
+    max-width: 400px;
+  }
+
+  .custom-text span {
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  .custom-text h2 span {
+    color: #f4b400;
+  }
+
+  .custom-img img {
+    width: 500px;
+    border-radius: 10px;
+    animation: slideIn 1.2s ease;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>

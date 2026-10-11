@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bicycles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        background: #f5f5f5;
+      }
+      header {
+        background: #000;
+        color: #fff;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header nav a {
+        color: #fff;
+        margin-left: 20px;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+      header nav a:hover {
+        opacity: 1;
+      }
+
+      .hero {
+        background: #111;
+        color: #fff;
+        padding: 60px 40px;
+      }
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .bike-section {
+        width: 90%;
+        margin: 40px auto;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.6s;
+      }
+      .bike-section.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .bike-img img {
+        width: 400px;
+        border-radius: 6px;
+      }
+      .bike-info {
+        flex: 1;
+        background: #fff;
+        padding: 30px;
+        border-radius: 6px;
+      }
+      .bike-info h2 {
+        margin-bottom: 10px;
+      }
+      .bike-info ul {
+        margin: 10px 0 20px 20px;
+      }
+      .btn {
+        display: inline-block;
+        background: #ffb100;
+        color: #000;
+        padding: 12px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background: #000;
+        color: #fff;
+        padding: 40px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      /* voir plus */
+      #more {
+        display: none;
+        background: #eee;
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        border-radius: 8px;
+      }
+      #close {
+        cursor: pointer;
+        color: #000;
+        font-weight: bold;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>bikecraft</h2>
+      <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="baysclet.html">Bicycles</a>
+        <a href="Insurance.html">Insurance</a>
+        <a href="index.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <p>CHOOSE THE BEST FOR YOU</p>
+      <h1>our bicycles.</h1>
+    </div>
+
+    <section id="b1" class="bike-section">
+      <div class="bike-img"><img src="bicicleta1 1.svg" /></div>
+      <div class="bike-info">
+        <h2>Nimbus Stark</h2>
+        <p>The Nimbus Stark is the best Bikcraft ever created by our team.</p>
+        <ul>
+          <li>Electric Motor</li>
+          <li>Carbon Fiber</li>
+          <li>50 km/h</li>
+          <li>Tracker</li>
+        </ul>
+        <a class="btn" onclick="showMore()">MORE ABOUT →</a>
+      </div>
+    </section>
+
+    <section id="b2" class="bike-section">
+      <div class="bike-img"><img src="bicicleta2.svg" /></div>
+      <div class="bike-info">
+        <h2>Magic Might</h2>
+        <p>The Magic Might is the best Bikcraft ever created by our team.</p>
+        <ul>
+          <li>Electric Motor</li>
+          <li>Carbon Fiber</li>
+          <li>50 km/h</li>
+          <li>Tracker</li>
+        </ul>
+        <a class="btn" onclick="showMore()">MORE ABOUT →</a>
+      </div>
+    </section>
+
+    <section id="b3" class="bike-section">
+      <div class="bike-img"><img src="bicicleta3.svg" /></div>
+      <div class="bike-info">
+        <h2>Nebula Cosmic</h2>
+        <p>The Nebula Cosmic is the best Bikcraft ever created by our team.</p>
+        <ul>
+          <li>Electric Motor</li>
+          <li>Carbon Fiber</li>
+          <li>50 km/h</li>
+          <li>Tracker</li>
+        </ul>
+        <a class="btn" onclick="showMore()">MORE ABOUT →</a>
+      </div>
+    </section>
+
+    <div id="more">
+      <span id="close" onclick="hideMore()">X</span>
+      <h2>Informations supplémentaires</h2>
+      <p>
+        Voici plus de détails sur les vélos, leurs matériaux, moteurs, garanties
+        et performances.
+      </p>
+    </div>
+
+    <footer>
+      <div>
+        <h3>bikecraft</h3>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <p>+212 600-000016</p>
+        <p>contact@contactme.com</p>
+      </div>
+      <div>
+        <h4>INFORMATION</h4>
+        <p>Bicycles</p>
+        <p>Insurance</p>
+        <p>Contact</p>
+      </div>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll(".bike-section");
+      window.addEventListener("scroll", () => {
+        sections.forEach((sec) => {
+          const pos = sec.getBoundingClientRect().top;
+          if (pos < window.innerHeight - 100) {
+            sec.classList.add("show");
+          }
+        });
+      });
+      function showMore() {
+        document.getElementById("more").style.display = "block";
+      }
+      function hideMore() {
+        document.getElementById("more").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

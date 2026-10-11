@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance Plans</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #111;
+        color: #fff;
+      }
+      .insurance {
+        padding: 60px;
+        text-align: center;
+      }
+
+      .insurance h1 {
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      .insurance h1 span {
+        color: #f4b400;
+      }
+      .plans {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: #1a1a1a;
+        width: 420px;
+        padding: 40px;
+        border-radius: 8px;
+        position: relative;
+        transform: translateY(40px);
+        opacity: 0;
+        animation: fadeUp 1s forwards;
+      }
+
+      .card:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes fadeUp {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .card h2 {
+        font-size: 20px;
+        color: #ccc;
+      }
+
+      .price {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        text-align: right;
+      }
+
+      .price span {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .price p {
+        font-size: 12px;
+        color: #aaa;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 25px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      ul li::before {
+        content: "✔ ";
+        color: #f4b400;
+        margin-right: 5px;
+      }
+      .btn {
+        margin-top: 30px;
+        padding: 12px 25px;
+        font-size: 14px;
+        background: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #555;
+      }
+
+      .gold-btn {
+        background: #f4b400;
+        color: #000;
+      }
+
+      .gold-btn:hover {
+        background: #ffcc33;
+      }
+
+      /* FOOTER */
+      footer {
+        margin-top: 60px;
+        padding: 40px 60px;
+        background: #0d0d0d;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .footer-container h3 {
+        color: #999;
+        margin-bottom: 10px;
+      }
+
+      .footer-container p {
+        margin: 5px 0;
+        color: #ccc;
+      }
+
+      .social img {
+        width: 25px;
+        margin-right: 10px;
+      }
+
+      .copy {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+      }
+      header {
+        background-color: #000;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+        cursor: default;
+        animation: colorPulse 3s infinite alternate ease-in-out;
+      }
+
+      @keyframes colorPulse {
+        0%,
+        100% {
+          color: white;
+        }
+        50% {
+          color: #f9a825;
+        }
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      nav ul li a {
+        color: white;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+      nav ul li a:hover {
+        opacity: 1;
+        color: #f9a825;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="accueil.html" class="logo">bikcraft</a>
+      <nav>
+        <ul>
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="baysclet.html">Bicycles</a></li>
+          <li><a href="Insurance.html">Insurance</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="insurance">
+      <h1>Insurance<span>.</span></h1>
+
+      <div class="plans">
+        <div class="card silver">
+          <h2>SILVER</h2>
+
+          <div class="price">
+            <span>R$ 199</span>
+            <p>monthly</p>
+          </div>
+
+          <ul>
+            <li>Two changes a year</li>
+            <li>Technical assistance</li>
+            <li>Suporte 08h to 18h</li>
+            <li>Statewide coverage</li>
+          </ul>
+
+          <button class="btn">REGISTER</button>
+        </div>
+        <div class="card gold">
+          <h2>GOLD</h2>
+
+          <div class="price">
+            <span>R$ 299</span>
+            <p>monthly</p>
+          </div>
+
+          <ul>
+            <li>Five changes a year</li>
+            <li>Technical assistance</li>
+            <li>Suporte 24h</li>
+            <li>National coverage</li>
+            <li>Partner discounts</li>
+            <li>Access to the Bikcraft Club</li>
+          </ul>
+
+          <button class="btn gold-btn">REGISTER</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="logo">
+          <h2>bikcraft</h2>
+        </div>
+
+        <div class="contact">
+          <h3>CONTACT</h3>
+          <p>+55 21 9999-9999</p>
+          <p>contact@contactme.com</p>
+          <p>Rue Al nassr – TAZA</p>
+          <p>MOROCCO – TZ</p>
+
+          <div class="social">
+            <img src="instagram.svg" />
+            <img src="facebook.svg" />
+            <img src="youtube.svg" />
+          </div>
+        </div>
+
+        <div class="info">
+          <h3>INFORMATION</h3>
+          <p>Bicycles</p>
+          <p>Insurance</p>
+          <p>Contact</p>
+          <p>Terms and Conditions</p>
+        </div>
+      </div>
+
+      <p class="copy">Bikcraft © All rights reserved.</p>
+    </footer>
+  </body>
+</html>

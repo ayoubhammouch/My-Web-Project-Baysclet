@@ -1,0 +1,358 @@
+*, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+  
+    header {
+      background-color: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+   
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+      cursor: default;
+      animation: colorPulse 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes colorPulse {
+      0%, 100% { color: white; }
+      50% { color: #f9a825; } 
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    nav ul li a {
+      color: white;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+    nav ul li a:hover {
+      opacity: 1;
+      color: #f9a825;
+    }
+
+    
+    main {
+      background-color: #000;
+      color: white;
+      padding: 2rem 2rem 4rem;
+      margin-top: 1rem;
+    }
+
+   
+    .response-text {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      opacity: 0.5;
+      letter-spacing: 2px;
+      margin: 0 0 0.5rem 2px;
+      font-weight: 600;
+    }
+
+   
+    h1.main-title {
+      font-weight: 900;
+      font-size: 2.5rem;
+      margin: 0 0 2rem 0;
+      font-family: 'Segoe UI Black', Arial, sans-serif;
+    }
+    h1.main-title::after {
+      content: '.';
+      color: #f9a825;
+      margin-left: 0.3rem;
+    }
+
+    
+    .contact-wrapper {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    
+    .contact-info {
+      background-color: #111;
+      flex: 1 1 320px;
+      padding: 2rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+   
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .info-item svg {
+      fill: #f9a825;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+
+    
+    .social-icons {
+      margin-top: auto;
+      display: flex;
+      gap: 1rem;
+    }
+    .social-icons a {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      color: #f9a825;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: white;
+    }
+    .social-icons svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+   
+    form {
+      background-color: white;
+      flex: 2 1 500px;
+      padding: 2rem;
+      border-radius: 8px;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1.5px solid #ddd;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #f9a825;
+      box-shadow: 0 0 8px rgba(249, 168, 37, 0.6);
+    }
+
+    
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .form-group {
+      flex: 1 1 100%;
+    }
+    @media (min-width: 600px) {
+      .form-group.half {
+        flex: 1 1 50%;
+      }
+    }
+
+    button.send-btn {
+      border: none;
+      background-color: #f9a825;
+      font-weight: 700;
+      color: #000;
+      font-size: 1rem;
+      padding: 0.75rem;
+      cursor: pointer;
+      border-radius: 5px;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+    }
+    button.send-btn:hover {
+      background-color: #d18f02;
+    }
+    .aa {
+      color: yellow;
+    }
+    
+    section.local-stores {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section.local-stores h2 {
+      font-weight: 900;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .store-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .store-card {
+      background: #fff;
+      box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .store-map {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      filter: grayscale(80%) contrast(0.9);
+      border-radius: 8px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .store-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #111;
+      margin: 0;
+    }
+
+    .store-address,
+    .store-email,
+    .store-phone,
+    .store-hours {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .store-email a, .store-phone a {
+      color: #f9a825;
+    }
+
+   
+    .hours-bullet {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #f9a825;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+ 
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 2rem 2rem;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    footer .footer-left,
+    footer .footer-center,
+    footer .footer-right {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    footer .footer-left {
+      font-weight: 400;
+      user-select: none;
+      opacity: 0.6;
+    }
+    footer .footer-center p {
+      margin: 0.5rem 0;
+    }
+    footer .footer-center a {
+      display: block;
+      color: #f9a825;
+      margin-top: 0.5rem;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    footer .footer-center a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    footer .footer-right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    footer .footer-right ul li a {
+      color: white;
+      opacity: 0.8;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    footer .footer-right ul li a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+
+    @media (max-width: 650px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
